@@ -216,8 +216,8 @@ class WC_Shipping_External_Fetch extends WC_Shipping_Method {
 				
 				$package['contents'][ $item_id ]['categories'] = $catslugs;
 				$package['contents'][ $item_id ]['attributes'] = $attrs;
-				$package['contents'][ $item_id ]['name'] = $_product->name;
-				$package['contents'][ $item_id ]['sku'] = $_product->sku;
+				$package['contents'][ $item_id ]['name'] = $_product->get_name();
+				$package['contents'][ $item_id ]['sku'] = $_product->get_sku();
 				$package['contents'][ $item_id ]['dimensions'] = $_product->get_dimensions(false);
 				$package['contents'][ $item_id ]['purchase_note'] = $_product->get_purchase_note();
 				$package['contents'][ $item_id ]['weight'] = $_product->get_weight();
